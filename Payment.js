@@ -1,7 +1,7 @@
 // server.js
 const express = require('express');
 const app = express();
-const stripe = require('stripe')('sk_test_51RWhSOINeWisbQrzS1QSqVpAyQK6x9W5Ef1eLOAjGXpMOHOqShfjUNNDTADNBlv443rL7buF2PKbrJ961bAcisvW002LwPZyPi'); // Your Stripe Secret Key
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const cors = require('cors'); // Import the cors middleware
 app.use(express.json());
 app.use(cors({ origin: 'https://lapis-0c3faf.webflow.io' })); // Enable CORS for the specific Webflow origin
