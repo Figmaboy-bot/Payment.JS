@@ -22,8 +22,8 @@ app.post('/create-checkout-session', async (req, res) => {
       }],
       customer_email: email,
       metadata,
-      success_url: 'https://yourdomain.com/thank-you',
-      cancel_url: 'https://yourdomain.com/cancelled',
+      success_url: 'https://lapis-0c3faf.webflow.io/,
+      cancel_url: 'https://lapis-0c3faf.webflow.io/,
     });
     res.json({ url: session.url });
   } catch (err) {
